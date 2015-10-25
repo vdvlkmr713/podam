@@ -4,5 +4,4 @@ machine:
 test:
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-    archetype:create   -DarchetypeGroupId=org.apache.maven.archetypes   -DgroupId=com.mycompany.app   -DartifactId=my-app
     - find . -type f -regex ".*/fest-assert/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
